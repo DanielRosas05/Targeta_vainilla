@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es" class="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portafolio profesional de Ing. Daniel Rosas - Desarrollador Web y Especialista en TI en CDMX" />
+    <title>Daniel Rosas | Desarrollador Web & TI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="ICO/Logo_favi.png" type="image/png" />
+</head>
+
+<body>
+    <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="main-card">
+        <header class="hero">
+            <img src="ICO/Perfil.jpeg" alt="Daniel Rosas" class="foto-perfil">
+            <h1>Ing. Daniel Rosas</h1>
+            <p class="subtitulo">Desarrollador Web | Soporte Técnico TI | Redes</p>
+        </header>
+
+        <main class="contenido">
+            <section id="sobre-mi">
+                <h2>Sobre mí</h2>
+                <p>Soy una persona apasionada por crear interfaces limpias, rápidas y accesibles. Me gusta transformar ideas complejas en experiencias simples y agradables para el usuario.</p>
+                <p>Actualmente trabajo en proyectos de desarrollo web y soporte TI en CDMX, y sigo aprendiendo tecnologías modernas como React, Node.js y Tailwind CSS.</p>
+            </section>
+
+            <section id="stack">
+                <h2>Stack Tecnológico</h2>
+                <div class="tags">
+                    <span>HTML5</span>
+                    <span>CSS3 / SCSS</span>
+                    <span>JavaScript</span>
+                    <span>Git & GitHub</span>
+                    <span>Soporte Técnico</span>
+                    <span>Redes & Infraestructura</span>
+                </div>
+            </section>
+
+            <section id="experiencia">
+                <h2>Experiencia Profesional</h2>
+                <div class="experiencia-item">
+                    <h3>Técnico Instalador de Sistemas de Videovigilancia</h3>
+                    <p class="empresa">Radar (Proyecto de Videovigilancia CDMX) · 2024 -Concluido</p>
+                    <ul>
+                        <li>Instalación y configuración de cámaras de videovigilancia en domicilios particulares..</li>
+                        <li>Colocación de cableado, soportes y equipos de grabación.</li>
+                        <li>Verificación del correcto funcionamiento de los sistemas instalados.</li>
+                        <li>Trabajo directo con vecinos y beneficiarios del programa</li>
+                    </ul>
+                </div>
+                <div class="experiencia-item">
+                    <h3>Servicio Social</h3>
+                    <p class="empresa">Realizado en El Congreso de la Ciudad De Mexicó</p>
+                    <ul>
+                        <li>Soporte Técnico TI</li>
+                        <li>Instalación, configuración y mantenimiento de redes y equipos.</li>
+                        <li>Resolución de incidencias y soporte a usuarios finales.</li>
+                    </ul>
+                </div>
+                <div class="experiencia-item">
+                    <h3>Operador de Consola / Técnico de Sonido</h3>
+                    <p class="empresa">Negocio familiar / Producciones independientes</p>
+                    <ul>
+                        <li>Mezcla de audio en vivo para voces e instrumentos</li>
+                        <li>Configuración y ajuste de micrófonos (alámbricos e inalámbricos).</li>
+                        <li>Trabajo bajo presión durante eventos en directo.</li>
+                    </ul>
+
+                </div>
+            </section>
+
+            <section id="educacion">
+                <h2>Educación</h2>
+                <ul class="lista-simple">
+                    <li><strong>Ingeniería en Sistemas Computacionales</strong> – [Universidad], 2022 - Presente</li>
+                    <li><strong>Certificación en Redes</strong> – [Institución], 2023</li>
+                </ul>
+            </section>
+
+            <section id="habilidades">
+                <h2>Habilidades</h2>
+                <ul class="lista-simple">
+                    <li>Trabajo en equipo y comunicación efectiva</li>
+                    <li>Resolución de problemas técnicos</li>
+                    <li>Aprendizaje autónomo y adaptación rápida</li>
+                    <li>Gestión básica de proyectos y metodologías ágiles</li>
+                </ul>
+            </section>
+
+            <section id="idiomas">
+                <h2>Idiomas</h2>
+                <ul class="lista-simple">
+                    <li>Español – Nativo</li>
+                    <li>Inglés – Intermedio (B1/B2)</li>
+                </ul>
+            </section>
+
+            <section id="contacto">
+                <h2>Contacto</h2>
+                <ul class="contact-list">
+                    <li><a href="mailto:drubenra11@gmail.com"><i class="fas fa-envelope"></i> drubenra11@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/danielrosas" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="https://github.com/danielrosas" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="pie">
+            <p>© 2026 Daniel Rosas · Hecho con 🥚 en CDMX</p>
+        </footer>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        let currentTheme = localStorage.getItem('theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+        html.classList.add(currentTheme);
+        toggleBtn.innerHTML = currentTheme === 'dark' ?
+            '<i class="fas fa-sun"></i>' :
+            '<i class="fas fa-moon"></i>';
+
+        toggleBtn.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.replace('dark', 'light');
+                toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.replace('light', 'dark');
+                toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    </script>
+</body>
+
+</html>
